@@ -10,7 +10,6 @@ body {
 h1 {
     font-size: 72px;
     color: rgba(255,255,255,1);
-    font-variant: small-caps;
 }
 a {
     text-decoration:none;
