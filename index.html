@@ -58,8 +58,11 @@
         if(!v_session){
             v_session = Array(32+1).join((Math.random().toString(36)+'00000000000000000').slice(2, 18)).slice(0, 32)
         }
-        d.cookie = c_tracker + '=' + v_tracker + '; expires=' + gT(n,2 * 365 * 24 * 3600 * 1000) + ';';
-        d.cookie = c_session + '=' + v_session + '; expires=' + gT(n,2 * 3600 * 1000) + ';';
+	var e_tracker = gT(n,2 * 365 * 24 * 3600 * 1000);
+	var e_session = gT(n,2 * 3600 * 1000);
+			
+        d.cookie = c_tracker + '=' + v_tracker + '; expires=' + e_tracker + ';';
+        d.cookie = c_session + '=' + v_session + '; expires=' + e_session + ';';
         //d.cookie= c_tracker
         //d.cookie= c_session;
         var i = d.createElement('img');
@@ -72,7 +75,9 @@
         + '&r='+d.referrer
         + '&t='+d.title
         + '&'+c_tracker + '=' + v_tracker
-        + '&'+c_session + '=' + v_session;
+        + '&'+c_session + '=' + v_session
+	+ '&et='+e_tracker
+	+ '&es='+e_session;
         
         var b = d.getElementsByTagName('body')[0];
         b.appendChild(i);
