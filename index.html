@@ -31,58 +31,7 @@
 			<a href='mailto:gustav.engstrom@gmail.com' class='symbol' title='Email me!' icon='circleemail '></a>
 		</div>
 
-        <script>
-		(function(){
-        var uuid='24812d9267fc41b5a3f642607cc15372';
-        var d =document;
-        var gC = function(d,n){
-            var v = '; ' + d.cookie;
-            var p = v.split('; ' + n + '=');
-            return (p.length == 2) ? p.pop().split(';').shift() : null;
-        };
-        var gT = function(d,o){
-            var date = (new Date(d)).setTime(d.getTime()+o);
-            return new Date(date).toUTCString();
-        };
-
-        var n = new Date();
-
-        var c_tracker ='__upsales_v_' + uuid +'_tracker';
-        var c_session ='__upsales_v_' + uuid +'_session';
-
-        var v_tracker = gC(d,c_tracker);
-        var v_session = gC(d,c_session);
-        if(!v_tracker){
-            v_tracker = Array(32+1).join((Math.random().toString(36)+'00000000000000000').slice(2, 18)).slice(0, 32)
-        }
-        if(!v_session){
-            v_session = Array(32+1).join((Math.random().toString(36)+'00000000000000000').slice(2, 18)).slice(0, 32)
-        }
-	var e_tracker = gT(n,2 * 365 * 24 * 3600 * 1000);
-	var e_session = gT(n,2 * 3600 * 1000);
-			
-        d.cookie = c_tracker + '=' + v_tracker + '; expires=' + e_tracker + ';';
-        d.cookie = c_session + '=' + v_session + '; expires=' + e_session + ';';
-        //d.cookie= c_tracker
-        //d.cookie= c_session;
-        var i = d.createElement('img');
-        var querystring = document.location.href.split('?');
-        i.src = ''
-        + 'https://pxl.upsales.com/pixel.gif?'
-        + 'a=' + uuid
-        + '&u='+ querystring[0]
-        + '&q=' + querystring[1]
-        + '&r='+d.referrer
-        + '&t='+d.title
-        + '&'+c_tracker + '=' + v_tracker
-        + '&'+c_session + '=' + v_session
-	+ '&et='+e_tracker
-	+ '&es='+e_session;
-        
-        var b = d.getElementsByTagName('body')[0];
-        b.appendChild(i);
-    })();
-    	</script>
+        <script>!function(){var e="24812d9267fc41b5a3f642607cc15372",t=document,i=function(e,t){var i="; "+e.cookie,r=i.split("; "+t+"=");return 2==r.length?r.pop().split(";").shift():null},r=function(e,t){var i=new Date(e).setTime(e.getTime()+t);return new Date(i).toUTCString()},n=new Date,a="__upsales_v_"+e+"_tracker",o="__upsales_v_"+e+"_session",s=i(t,a),c=i(t,o);s||(s=Array(33).join((Math.random().toString(36)+"00000000000000000").slice(2,18)).slice(0,32)),c||(c=Array(33).join((Math.random().toString(36)+"00000000000000000").slice(2,18)).slice(0,32)),t.cookie=a+"="+s+"; expires="+r(n,63072e6)+";",t.cookie=o+"="+c+"; expires="+r(n,72e5)+";";var l=t.createElement("img"),p=document.location.href.split("?");l.src="https://pxl.upsales.com/pixel.gif?a="+e+"&u="+p[0]+"&q="+p[1]+"&r="+t.referrer+"&t="+t.title+"&"+a+"="+s+"&"+o+"="+c;var u=t.getElementsByTagName("body")[0];u.appendChild(l)}();</script>
 	
 </body>
 
